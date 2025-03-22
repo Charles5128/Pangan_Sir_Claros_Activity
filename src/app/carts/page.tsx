@@ -22,7 +22,6 @@ const CartsPage = () => {
 
     fetchCarts();
   }, []);
-
   return (
     <Layout>
       <h1 className="text-3xl font-bold text-center text-blue-800 mb-6">Shopping Carts</h1>

@@ -8,7 +8,6 @@ interface Todo {
   todo: string;
   completed: boolean;
 }
-
 const Page = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [loading, setLoading] = useState(true);
@@ -26,17 +25,11 @@ const Page = () => {
         setLoading(false);
       }
     };
-
     fetchTodos();
-  }, []);
-
-  return (
-    <Layout>
-      <div className="min-h-screen bg-gray-100">
-        {/* Main Content */}
+  }, []);return (
+    <Layout> <div className="min-h-screen bg-gray-100">
         <div className="container mx-auto py-8 px-4">
           <h1 className="text-center text-3xl font-bold text-blue-700 mb-6">All Todos</h1>
-
           {loading ? (
             <div className="flex justify-center items-center min-h-[50vh]">
               <p className="text-lg font-semibold text-gray-600">Loading todos...</p>
